@@ -2,7 +2,9 @@
 import random
 elementos = ['piedra','papel','tijera']
 
-userOption = input('piedra, papel o tijera =>')
+userOption = input('piedra, papel o tijera => ')
+
+userOption = userOption.lower()
 
 computerOption = random.choice(elementos)
 
@@ -35,6 +37,9 @@ elif userOption == 'tijera':
     else:
         print ('Piedra gana a tijera')
         print ('Gana la Maquina')
+
+else:
+    print ('La opción ingresada no es correcta')
     
 
 
