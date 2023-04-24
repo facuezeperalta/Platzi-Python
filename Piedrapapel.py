@@ -1,12 +1,20 @@
 #Proyecto de piedra papel o tijera.
 import random
-elementos = ['piedra','papel','tijera']
+elementos = ('piedra','papel','tijera')
 
 userOption = input('piedra, papel o tijera => ')
 
 userOption = userOption.lower()
 
+while userOption not in elementos:
+    print ('La opcion ingresada no es válida, intente nuevamente')
+    userOption = input('Ingresa una de estas => piedra, papel o tijera => ')
+
+
 computerOption = random.choice(elementos)
+
+print('User option =>',userOption)
+print('Computer option =>',computerOption)
 
 """ print (computerOption) """
 
